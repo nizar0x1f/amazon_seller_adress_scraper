@@ -27,7 +27,6 @@ def get_adress(driver, url):
         
         seller_info_box = driver.find_element(By.XPATH, "//h3[text()='Detailed Seller Information']/../..")
         raw_text = seller_info_box.text
-        """split the raw text by 'Business Address:' and get the second element of the list"""
         business_address = raw_text.split('Business Address:')[1]
         business_address = business_address.replace('\n', ' ')
         business_name = raw_text.split('Business Name:')[1].split('Business Address:')[0]
